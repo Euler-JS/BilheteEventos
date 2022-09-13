@@ -1,0 +1,7 @@
+{
+  "name": "Eventos",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

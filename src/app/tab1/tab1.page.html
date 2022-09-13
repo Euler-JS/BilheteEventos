@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title style="color: #FFF;">
+      Eventos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" style="background-color: #000;">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Eventos</ion-title>
+    </ion-toolbar>
+
+  </ion-header>
+
+  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
+  <div *ngFor="let item of eventosRegistrados">
+    <ion-card >
+    <img src="{{item.imagem}}"/>
+    <ion-card-header>
+      <ion-card-title class="text-color">{{item.titulo}}</ion-card-title>
+      <ion-card-subtitle class="text-color">{{item.local}}</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content class="text-color">
+      {{item.detalhes}}
+    </ion-card-content>
+  </ion-card>
+  </div>
+</ion-content>
