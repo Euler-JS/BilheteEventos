@@ -75,6 +75,7 @@ export class Tab1Page {
   async openTicketModal(item) {
     const modal = await this.modalController.create({
       component: TicketModalPage,
+      cssClass: 'show-modal',
       componentProps: {
         item: item
       }

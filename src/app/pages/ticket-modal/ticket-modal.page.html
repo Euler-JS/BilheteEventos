@@ -1,6 +1,7 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>{{ item.title }}</ion-title>
+    <ion-title>{{ item.title }} </ion-title>
+   
   </ion-toolbar>
 </ion-header>
 
@@ -29,4 +30,9 @@
 
   <!-- Botão para efetuar pagamento via Mpesa -->
   <ion-button expand="full" [disabled]="!isValidPhoneNumber || totalAmount <= 0" color="primary" (click)="makePayment()">Efetuar Pagamento via Mpesa</ion-button>
+
+
+  <ion-fab-button class="closeModal" color="primary" (click)="modalController.dismiss()">
+    <ion-icon color="light" name="close"></ion-icon>
+  </ion-fab-button>
 </ion-content>

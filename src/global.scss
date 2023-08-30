@@ -36,3 +36,22 @@ ion-toolbar{
 ion-card{
     background-color: var(--ion-color-primary-light);
 }
+
+.closeModal {
+    position: absolute;
+    bottom: 27px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .show-modal {
+
+    --width: calc(100% - 25px);
+    --height: calc(100% - 25px);
+    --max-width: 390px;
+    --max-height: 735px;
+
+  .modal-wrapper {
+    border-radius: 13px;}
+}
