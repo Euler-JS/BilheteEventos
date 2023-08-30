@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { collection, setDoc } from '@angular/fire/firestore';
+import { HomeService } from '../services/home.service';
 
 @Component({
   selector: 'app-tabs',
@@ -7,6 +9,7 @@ import { Component } from '@angular/core';
 })
 export class TabsPage {
 
-  constructor() {}
-
+  constructor(
+    ) {
+  }
 }

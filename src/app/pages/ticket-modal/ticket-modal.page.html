@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ item.title }} </ion-title>
+   
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="image-container" style="height: 200px;">
+    <img src="{{item.imageUrl}}" />
+  </div>
+  <ion-list>
+    <ion-item *ngFor="let ticket of item.ticketTypes; let i = index">
+      <ion-label>{{ ticket.type }} - {{ ticket.value }} MT : </ion-label>
+      <ion-input type="number" [(ngModel)]="selectedTickets[i]" (ionChange)="updateTotal()"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div class="ion-padding">
+    Total: {{ totalAmount.toFixed(2) }} MT
+  </div>
+
+  <!-- Input para número de celular -->
+  <ion-item>
+    <ion-label position="floating">Número de Celular</ion-label>
+    <ion-input type="tel" [(ngModel)]="phoneNumber" (ionChange)="validatePhoneNumber()"></ion-input>
+  </ion-item>
+
+  <p *ngIf="phoneNumber && !isValidPhoneNumber" class="error-text">O número de celular deve começar com 84 ou 85.</p>
+
+  <!-- Botão para efetuar pagamento via Mpesa -->
+  <ion-button expand="full" [disabled]="!isValidPhoneNumber || totalAmount <= 0" color="primary" (click)="makePayment()">Efetuar Pagamento via Mpesa</ion-button>
+
+
+  <ion-fab-button class="closeModal" color="primary" (click)="modalController.dismiss()">
+    <ion-icon color="light" name="close"></ion-icon>
+  </ion-fab-button>
+</ion-content>
