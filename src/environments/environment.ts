@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  apiUrl: 'https://backend-chi-two.vercel.app',
   firebase: {
     apiKey: "AIzaSyC0QPKj_r0mE0O32xFgN6-R_f5uRJ2oEsk",
     authDomain: "projectos001.firebaseapp.com",
