@@ -12,6 +12,10 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'ticket-modal',
+    loadChildren: () => import('./pages/ticket-modal/ticket-modal.module').then( m => m.TicketModalPageModule)
   }
 
 ];

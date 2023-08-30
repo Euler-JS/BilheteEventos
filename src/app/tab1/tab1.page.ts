@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ReadDataService } from '../services/read-data.service';
+import { ModalController } from '@ionic/angular';
+import { TicketModalPage } from '../pages/ticket-modal/ticket-modal.page';
 
 @Component({
   selector: 'app-tab1',
@@ -52,7 +54,8 @@ export class Tab1Page {
   //   }
   // ]
   eventosRegistrados: any[] = [];
-  constructor(private dataService: ReadDataService) {}
+  constructor(private dataService: ReadDataService,
+    private modalController: ModalController) {}
 
   ngOnInit() {
     this.obterEventos();
@@ -67,6 +70,16 @@ export class Tab1Page {
         console.error('Erro ao obter os eventos:', error);
       }
     );
+  }
+
+  async openTicketModal(item) {
+    const modal = await this.modalController.create({
+      component: TicketModalPage,
+      componentProps: {
+        item: item
+      }
+    });
+    return await modal.present();
   }
 
 }
