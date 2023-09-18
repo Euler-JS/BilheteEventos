@@ -6,6 +6,7 @@ export const environment = {
   production: false,
   apiUrl: 'https://backend-chi-two.vercel.app',
   mpesaPaymentUrl:'https://mpesa-jade.vercel.app',
+  privateKeyMpesa:'c03fc6cf-f3eb-4932-81f6-1c88707b3eed',
   firebase: {
     apiKey: "AIzaSyC0QPKj_r0mE0O32xFgN6-R_f5uRJ2oEsk",
     authDomain: "projectos001.firebaseapp.com",

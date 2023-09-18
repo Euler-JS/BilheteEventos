@@ -43,7 +43,7 @@ export class TicketModalPage implements OnInit {
     // Use this.phoneNumber para o número de celular ao efetuar o pagamento via Mpesa
     // Implemente a lógica de pagamento aqui
     // Feche o modal após o pagamento
-    this.p.doPayment();
+    this.p.doPayment(this.phoneNumber, this.totalAmount);
     // this.modalController.dismiss();
   }
 
